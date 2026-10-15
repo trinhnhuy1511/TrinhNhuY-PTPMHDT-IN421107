@@ -1,0 +1,54 @@
+
+============================================================
+Bước 1: Tạo CLB "Tech Club"
+============================================================
+Đã tạo CLB: Tech Club (Id = ed21ccf7-1d6e-44f0-9dbc-02b62d4e8a1b)
+Mô tả: Câu lạc bộ công nghệ: chia sẻ kiến thức lập trình, AI và dự án thực tế.
+
+============================================================
+Bước 2: Thêm 3 thành viên vào CLB
+============================================================
++ Nguyễn Văn An (SV001) - active: True
++ Trần Thị Bình (SV002) - active: True
++ Lê Hoàng Cường (SV003) - active: True
+Tổng số thành viên: 3
+
+============================================================
+Bước 3: Tạo sự kiện "Workshop AI"
+============================================================
+Sự kiện: Workshop AI | Ngày: 22/10/2026 | Sức chứa: 50
+
+============================================================
+Bước 4: Đăng ký tham dự và xác nhận
+============================================================
+Nguyễn Văn An: đăng ký -> Pending
+Nguyễn Văn An: xác nhận -> Confirmed
+Trần Thị Bình: đăng ký -> Pending
+Trần Thị Bình: xác nhận -> Confirmed
+
+============================================================
+Bước 5: Check-in
+============================================================
+CheckIn 63f436ec | phiếu d5757b4b | QrCode | 09:07:14
+
+============================================================
+Bước 6: Báo cáo tham dự
+============================================================
+Sự kiện: Workshop AI
+Số đăng ký: 2/50
+Số check-in: 1
+Danh sách đăng ký:
+  - Nguyễn Văn An [Confirmed]
+  - Trần Thị Bình [Confirmed]
+Danh sách đã check-in:
+  - Nguyễn Văn An lúc 09:07:14
+
+============================================================
+Bước 7: Thử thao tác vi phạm luật nghiệp vụ
+============================================================
+Đã huỷ phiếu của Trần Thị Bình -> Cancelled
+Bắt được InvalidOperationException: Không thể xác nhận phiếu đang ở trạng thái Cancelled.
+Bắt được InvalidOperationException: Chỉ phiếu đã xác nhận mới được check-in (hiện tại: Cancelled).
+
+============================================================
+Hoàn tất demo.
