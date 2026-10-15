@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EduHub.Ch01</name>
+    </assembly>
+    <members>
+        <member name="T:EduHub.Ch01.Domain.CheckInMethod">
+            <summary>
+            Hình thức điểm danh.
+            </summary>
+        </member>
+        <member name="F:EduHub.Ch01.Domain.CheckInMethod.Manual">
+            <summary>Ban tổ chức điểm danh thủ công.</summary>
+        </member>
+        <member name="F:EduHub.Ch01.Domain.CheckInMethod.QrCode">
+            <summary>Quét mã QR.</summary>
+        </member>
+        <member name="F:EduHub.Ch01.Domain.CheckInMethod.SelfService">
+            <summary>Sinh viên tự check-in.</summary>
+        </member>
+        <member name="T:EduHub.Ch01.Domain.CheckIn">
+            <summary>
+            Bản ghi điểm danh, thuộc đúng một <see cref="T:EduHub.Ch01.Domain.Registration"/>.
+            </summary>
+        </member>
+        <member name="P:EduHub.Ch01.Domain.CheckIn.Id">
+            <summary>Khoá chính của bản ghi điểm danh.</summary>
+        </member>
+        <member name="P:EduHub.Ch01.Domain.CheckIn.RegistrationId">
+            <summary>Khoá ngoại tới <see cref="T:EduHub.Ch01.Domain.Registration"/>.</summary>
+        </member>
+        <member name="P:EduHub.Ch01.Domain.CheckIn.CheckedInAt">
+            <summary>Thời điểm điểm danh.</summary>
+        </member>
+        <member name="P:EduHub.Ch01.Domain.CheckIn.Method">
+            <summary>Hình thức điểm danh.</summary>
+        </member>
+        <member name="M:EduHub.Ch01.Domain.CheckIn.Create(EduHub.Ch01.Domain.Registration,EduHub.Ch01.Domain.CheckInMethod)">
+            <summary>
+            Tạo bản ghi điểm danh; chỉ phiếu đã xác nhận mới được check-in.
+            </summary>
+            <exception cref="T:System.ArgumentNullException">Phiếu đăng ký null.</exception>
+            <exception cref="T:System.InvalidOperationException">Phiếu chưa ở trạng thái Confirmed.</exception>
+        </member>
+        <member name="M:EduHub.Ch01.Domain.CheckIn.Summary">
+            <summary>Chuỗi mô tả ngắn gọn bản ghi điểm danh.</summary>
+        </member>
+        <member name="T:EduHub.Ch01.Domain.Club">
+            <summary>
+            Câu lạc bộ sinh viên.
+            </summary>
+        </member>
+        <member name="P:EduHub.Ch01.Domain.Club.Id">
+            <summary>Khoá chính của CLB.</summary>
+        </member>
+        <member name="P:EduHub.Ch01.Domain.Club.Name">
+            <summary>Tên CLB.</summary>
+        </member>
+        <member name="P:EduHub.Ch01.Domain.Club.Description">
+            <summary>Mô tả CLB.</summary>
+        </member>
+        <member name="P:EduHub.Ch01.Domain.Club.CreatedAt">
+            <summary>Thời điểm tạo CLB.</summary>
+        </member>
+        <member name="P:EduHub.Ch01.Domain.Club.Members">
+            <summary>Danh sách thành viên (chỉ đọc, thêm qua <see cref="M:EduHub.Ch01.Domain.Club.AddMember(EduHub.Ch01.Domain.Member)"/>).</summary>
+        </member>
+        <member name="M:EduHub.Ch01.Domain.Club.Create(System.String,System.String)">
+            <summary>
+            Tạo CLB mới sau khi kiểm tra dữ liệu đầu vào.
+            </summary>
+            <exception cref="T:System.ArgumentException">Tên CLB trống.</exception>
+        </member>
+        <member name="M:EduHub.Ch01.Domain.Club.AddMember(EduHub.Ch01.Domain.Member)">
+            <summary>Thêm thành viên vào CLB.</summary>
+            <exception cref="T:System.ArgumentNullException">Thành viên null.</exception>
+            <exception cref="T:System.InvalidOperationException">Thành viên đã có trong CLB.</exception>
+        </member>
+        <member name="M:EduHub.Ch01.Domain.Club.MemberCount">
+            <summary>Số lượng thành viên hiện có.</summary>
+        </member>
+        <member name="T:EduHub.Ch01.Domain.Event">
+            <summary>
+            Sự kiện do một CLB tổ chức.
+            </summary>
+        </member>
+        <member name="P:EduHub.Ch01.Domain.Event.Id">
+            <summary>Khoá chính của sự kiện.</summary>
+        </member>
+        <member name="P:EduHub.Ch01.Domain.Event.ClubId">
+            <summary>Khoá ngoại tới <see cref="T:EduHub.Ch01.Domain.Club"/> tổ chức sự kiện.</summary>
+        </member>
+        <member name="P:EduHub.Ch01.Domain.Event.Title">
+            <summary>Tiêu đề sự kiện.</summary>
+        </member>
+        <member name="P:EduHub.Ch01.Domain.Event.Date">
+            <summary>Ngày diễn ra.</summary>
+        </member>
+        <member name="P:EduHub.Ch01.Domain.Event.Capacity">
+            <summary>Số chỗ tối đa.</summary>
+        </member>
+        <member name="P:EduHub.Ch01.Domain.Event.IsOnline">
+            <summary>Sự kiện trực tuyến hay không.</summary>
+        </member>
+        <member name="M:EduHub.Ch01.Domain.Event.Create(System.Guid,System.String,System.DateTime,System.Int32,System.Boolean)">
+            <summary>
+            Tạo sự kiện mới sau khi kiểm tra dữ liệu đầu vào.
+            </summary>
+            <exception cref="T:System.ArgumentException">ClubId rỗng, tiêu đề trống hoặc sức chứa ≤ 0.</exception>
+        </member>
+        <member name="M:EduHub.Ch01.Domain.Event.HasCapacity(System.Int32)">
+            <summary>Kiểm tra sự kiện còn chỗ với số lượng đã đăng ký hiện tại.</summary>
+        </member>
+        <member name="T:EduHub.Ch01.Domain.Member">
+            <summary>
+            Thành viên sinh viên của câu lạc bộ.
+            </summary>
+        </member>
+        <member name="P:EduHub.Ch01.Domain.Member.Id">
+            <summary>Khoá chính của thành viên.</summary>
+        </member>
+        <member name="P:EduHub.Ch01.Domain.Member.Name">
+            <summary>Họ và tên.</summary>
+        </member>
+        <member name="P:EduHub.Ch01.Domain.Member.Email">
+            <summary>Email liên hệ.</summary>
+        </member>
+        <member name="P:EduHub.Ch01.Domain.Member.StudentCode">
+            <summary>Mã số sinh viên.</summary>
+        </member>
+        <member name="P:EduHub.Ch01.Domain.Member.JoinedAt">
+            <summary>Thời điểm tham gia hệ thống.</summary>
+        </member>
+        <member name="M:EduHub.Ch01.Domain.Member.Create(System.String,System.String,System.String)">
+            <summary>
+            Tạo thành viên mới sau khi kiểm tra dữ liệu đầu vào.
+            </summary>
+            <exception cref="T:System.ArgumentException">Tên/MSSV trống hoặc email không hợp lệ.</exception>
+        </member>
+        <member name="M:EduHub.Ch01.Domain.Member.IsActive">
+            <summary>Thành viên còn hoạt động hay không.</summary>
+        </member>
+        <member name="M:EduHub.Ch01.Domain.Member.Deactivate">
+            <summary>Ngừng hoạt động của thành viên.</summary>
+        </member>
+        <member name="T:EduHub.Ch01.Domain.RegistrationStatus">
+            <summary>
+            Trạng thái của phiếu đăng ký.
+            </summary>
+        </member>
+        <member name="F:EduHub.Ch01.Domain.RegistrationStatus.Pending">
+            <summary>Đã đăng ký, chờ xác nhận.</summary>
+        </member>
+        <member name="F:EduHub.Ch01.Domain.RegistrationStatus.Confirmed">
+            <summary>Đã được xác nhận.</summary>
+        </member>
+        <member name="F:EduHub.Ch01.Domain.RegistrationStatus.Cancelled">
+            <summary>Đã huỷ.</summary>
+        </member>
+        <member name="T:EduHub.Ch01.Domain.Registration">
+            <summary>
+            Phiếu đăng ký của một thành viên tham dự một sự kiện (bảng nối Member ↔ Event).
+            </summary>
+        </member>
+        <member name="P:EduHub.Ch01.Domain.Registration.Id">
+            <summary>Khoá chính của phiếu đăng ký.</summary>
+        </member>
+        <member name="P:EduHub.Ch01.Domain.Registration.MemberId">
+            <summary>Khoá ngoại tới <see cref="T:EduHub.Ch01.Domain.Member"/>.</summary>
+        </member>
+        <member name="P:EduHub.Ch01.Domain.Registration.EventId">
+            <summary>Khoá ngoại tới <see cref="T:EduHub.Ch01.Domain.Event"/>.</summary>
+        </member>
+        <member name="P:EduHub.Ch01.Domain.Registration.RegisteredAt">
+            <summary>Thời điểm đăng ký.</summary>
+        </member>
+        <member name="P:EduHub.Ch01.Domain.Registration.Status">
+            <summary>Trạng thái hiện tại.</summary>
+        </member>
+        <member name="M:EduHub.Ch01.Domain.Registration.Create(System.Guid,System.Guid)">
+            <summary>
+            Tạo phiếu đăng ký mới với trạng thái <see cref="F:EduHub.Ch01.Domain.RegistrationStatus.Pending"/>.
+            </summary>
+            <exception cref="T:System.ArgumentException">MemberId hoặc EventId rỗng.</exception>
+        </member>
+        <member name="M:EduHub.Ch01.Domain.Registration.Confirm">
+            <summary>Xác nhận phiếu đăng ký (chỉ từ trạng thái Pending).</summary>
+            <exception cref="T:System.InvalidOperationException">Phiếu không ở trạng thái Pending.</exception>
+        </member>
+        <member name="M:EduHub.Ch01.Domain.Registration.Cancel">
+            <summary>Huỷ phiếu đăng ký (từ Pending hoặc Confirmed).</summary>
+            <exception cref="T:System.InvalidOperationException">Phiếu đã huỷ trước đó.</exception>
+        </member>
+    </members>
+</doc>

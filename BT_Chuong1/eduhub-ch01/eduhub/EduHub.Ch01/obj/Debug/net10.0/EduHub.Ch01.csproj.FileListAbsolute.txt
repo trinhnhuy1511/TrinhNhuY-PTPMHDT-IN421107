@@ -1,0 +1,17 @@
+D:\dowloads\eduhub-ch01\eduhub\EduHub.Ch01\bin\Debug\net10.0\EduHub.Ch01.exe
+D:\dowloads\eduhub-ch01\eduhub\EduHub.Ch01\bin\Debug\net10.0\EduHub.Ch01.deps.json
+D:\dowloads\eduhub-ch01\eduhub\EduHub.Ch01\bin\Debug\net10.0\EduHub.Ch01.runtimeconfig.json
+D:\dowloads\eduhub-ch01\eduhub\EduHub.Ch01\bin\Debug\net10.0\EduHub.Ch01.dll
+D:\dowloads\eduhub-ch01\eduhub\EduHub.Ch01\bin\Debug\net10.0\EduHub.Ch01.pdb
+D:\dowloads\eduhub-ch01\eduhub\EduHub.Ch01\bin\Debug\net10.0\EduHub.Ch01.xml
+D:\dowloads\eduhub-ch01\eduhub\EduHub.Ch01\obj\Debug\net10.0\EduHub.Ch01.GeneratedMSBuildEditorConfig.editorconfig
+D:\dowloads\eduhub-ch01\eduhub\EduHub.Ch01\obj\Debug\net10.0\EduHub.Ch01.AssemblyInfoInputs.cache
+D:\dowloads\eduhub-ch01\eduhub\EduHub.Ch01\obj\Debug\net10.0\EduHub.Ch01.AssemblyInfo.cs
+D:\dowloads\eduhub-ch01\eduhub\EduHub.Ch01\obj\Debug\net10.0\EduHub.Ch01.csproj.CoreCompileInputs.cache
+D:\dowloads\eduhub-ch01\eduhub\EduHub.Ch01\obj\Debug\net10.0\EduHub.Ch01.dll
+D:\dowloads\eduhub-ch01\eduhub\EduHub.Ch01\obj\Debug\net10.0\refint\EduHub.Ch01.dll
+D:\dowloads\eduhub-ch01\eduhub\EduHub.Ch01\obj\Debug\net10.0\EduHub.Ch01.xml
+D:\dowloads\eduhub-ch01\eduhub\EduHub.Ch01\obj\Debug\net10.0\EduHub.Ch01.pdb
+D:\dowloads\eduhub-ch01\eduhub\EduHub.Ch01\obj\Debug\net10.0\EduHub.Ch01.genruntimeconfig.cache
+D:\dowloads\eduhub-ch01\eduhub\EduHub.Ch01\obj\Debug\net10.0\ref\EduHub.Ch01.dll
+D:\dowloads\eduhub-ch01\eduhub\EduHub.Ch01\obj\Debug\net10.0\EduHub.C.06E19863.Up2Date
