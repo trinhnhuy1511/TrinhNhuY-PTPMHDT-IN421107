@@ -24,6 +24,7 @@ using Ch02.Refactor.Services;
 //Console.WriteLine("3. Áp dụng Factory, Decorator, Strategy, Observer");
 //Console.WriteLine("4. Hoàn thiện Domain và viết unit test AAA (dotnet test)");
 //Console.WriteLine("5. Nhánh feature/solid-refactor, Conventional Commits, rebase, Pull Request");
+Console.OutputEncoding = System.Text.Encoding.UTF8;
 IAppLogger logger = new ConsoleLogger();
 
 INotificationServiceFactory notificationFactory = new NotificationServiceFactory();
